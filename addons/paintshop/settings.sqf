@@ -39,13 +39,23 @@ _textures = [
 	["Neon Camo","addons\paintshop\skins\spilled_neon.jpg"],
 	["Urban Camo","addons\paintshop\skins\urbancamo.jpg"],
 	["Zebra Camo","addons\paintshop\skins\zebracamo.paa"],
-//original halv textures from here down and commented out below
 	["Eagle","\a3\data_f_curator\Eagle\Data\eagle_co.paa"],
 	//preset colors
-	["Red","#(argb,8,8,3)color(1,0,0,1)"],
-	["Green","#(argb,8,8,3)color(0,1,0,1)"],
-	["Blue","#(argb,8,8,3)color(0,0,1,1)"],
+	["White","#(argb,8,8,3)color(1,1,1,1)"],
+	["Silver","#(argb,8,8,3)color(0.75,0.75,0.75,1)"],
+	["Gray","#(argb,8,8,3)color(0.5,0.5,0.5,1)"],
 	["Black","#(argb,8,8,3)color(0,0,0,0.6)"],
+	["Red","#(argb,8,8,3)color(1,0,0,1)"],
+	["Maroon","#(argb,8,8,3)color(0.5,0,0,0.7)"],
+	["Yellow","#(argb,8,8,3)color(1,1,0,1)"],
+	["Lime","#(argb,8,8,3)color(0,1,0,1)"],
+	["Green","#(argb,8,8,3)color(0,0.5,0,1)"],
+	["Aqua","#(argb,8,8,3)color(0,1,1,1)"],
+	["Teal","#(argb,8,8,3)color(0,0.5,0.5,1)"],
+	["Blue","#(argb,8,8,3)color(0,0,1,1)"],
+	["Navy","#(argb,8,8,3)color(0,0,0.5,1)"],
+	["Fuchsia","#(argb,8,8,3)color(1,0,1,1)"],
+	["Purple","#(argb,8,8,3)color(0.5,0,0.5,1)"],
 	["Pink","#(argb,8,8,3)color(1,0.75,0.84,0.2)"],
 	["Tan","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"]
 ];

@@ -167,8 +167,6 @@ HALV_paintshop_selected = {
 					HALV_vehsavetex = [ExileClientSessionId,HALV_paintshop_vehicletopaint];
 					publicVariableServer "HALV_vehsavetex";
 
-				}else{
-					titleText ["[SERVER]:\n*** VEHICLE PAINTJOB NOT SAVED! ***\nThere was a player in the vehicle!","PLAIN DOWN"];
 				};
 			};
 		};
