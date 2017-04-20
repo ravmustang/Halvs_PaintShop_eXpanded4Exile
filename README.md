@@ -26,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 All skins provided in this pack are the property of DonkeyPunch Community Gaming and DirtySanchez/=RAV=MusTanG
 
 ## Installation
+## STEP 0:
+####	--Move the addons folder into your mission file
 ####.
 
 ## STEP 1:
@@ -86,7 +88,7 @@ All skins provided in this pack are the property of DonkeyPunch Community Gaming
 #### 			};
 ####.
 
-## STEP 6b:
+## STEP 6b 6c and 6d:
 #### 	--add class Paint to your CfgInteractionMenus
 #### 	class Car and class Air and class Boat
 #### 
