@@ -7,6 +7,11 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+	Halv's Paintshop eXpanded 4 Exile 
+	by DirtySanchez
+	DonkeyPunch.INFO
+	https://discord.me/eXpoch
  */
  
 private["_constructionID","_data","_position","_vectorDirection","_vectorUp","_constructionObject","_damageLevel","_public","_pinCode"];
