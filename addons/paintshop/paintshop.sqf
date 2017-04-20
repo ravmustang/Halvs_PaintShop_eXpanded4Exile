@@ -308,6 +308,7 @@ while{alive player}do{
 			player sideChat "-- Paint Shop --";
 			_sendmessage = false;
 		};
+		ExileClientNearPaintShop = true;
 		if(player isEqualTo vehicle player)then{
 			if !(Backpack player in ["","B_Parachute","B_O_Parachute_02_F","B_I_Parachute_02_F","B_B_Parachute_02_F"])then{
 				if(_HALV_panitshop_bagaction< 0)then{
@@ -324,34 +325,20 @@ while{alive player}do{
 			}else{
 				player removeAction _HALV_panitshop_uniformaction;
 				_HALV_panitshop_uniformaction = -1;
-			};
-			_nearvehicles = (player nearEntities [["Air","LandVehicle","Ship"],40])-[player];
-			if !(_nearvehicles isEqualTo _lastsearch)then{{player removeAction _x}forEach _HALV_panitshop_vehicleactions;_HALV_panitshop_vehicleactions = [];};
-			if(count _HALV_panitshop_vehicleactions < 1)then{
-				{
-					if !(_x isKindOf "Wreck_Base")then{
-						_txt = (gettext (configFile >> 'cfgvehicles' >> (typeOf _x) >> 'displayName'));
-						_action = player addAction [format["<img size='1.5'image='\a3\Ui_f\data\map\VehicleIcons\iconmanmedic_ca.paa'/> <t color='#0096ff'>Paint %1</t>",_txt], {(_this select 3) call HALV_paintshop_opendialog;}, _x,1, false, true, "", ""];
-						_HALV_panitshop_vehicleactions pushBack _action;
-					};
-				}forEach _nearvehicles;
-			};
-			_lastsearch = _nearvehicles;
-	
+			};	
 		}else{
-			{player removeAction _x}forEach _HALV_panitshop_vehicleactions+[_HALV_panitshop_bagaction,_HALV_panitshop_uniformaction];
-			_HALV_panitshop_vehicleactions = [];
+			{player removeAction _x}forEach [_HALV_panitshop_bagaction,_HALV_panitshop_uniformaction];
 			_HALV_panitshop_uniformaction = -1;
 			_HALV_panitshop_bagaction = -1;
 			_lastsearch = [];
 		};
 	}else{
 		_sendmessage = true;
-		{player removeAction _x}forEach _HALV_panitshop_vehicleactions+[_HALV_panitshop_bagaction,_HALV_panitshop_uniformaction];
-		_HALV_panitshop_vehicleactions = [];
+		{player removeAction _x}forEach [_HALV_panitshop_bagaction,_HALV_panitshop_uniformaction];
 		_HALV_panitshop_uniformaction = -1;
 		_HALV_panitshop_bagaction = -1;
 		_lastsearch = [];
+		ExileClientNearPaintShop = false;
 	};
 	sleep 2;
 };

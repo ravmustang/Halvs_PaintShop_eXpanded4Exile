@@ -69,7 +69,7 @@ All skins provided in this pack are the property of DonkeyPunch Community Gaming
 #### 	OUTPUT = 1,2-STRING,3-STRING,4-STRING,5,6,7,8,9,10,11,12,13,14,15-STRING,16,17,18,19
 ####.
 
-## STEP 6:
+## STEP 6a:
 #### 	--add class Paint to your CfgInteractionMenus under class Construction >> Actions
 #### 	class Construction
 #### 	{
@@ -82,6 +82,20 @@ All skins provided in this pack are the property of DonkeyPunch Community Gaming
 #### 			{
 #### 				title = "Paint Base Part";
 #### 				condition = "call ExileClient_util_world_isInOwnTerritory";
+#### 				action = "ExileClientInteractionObject call HALV_paintshop_opendialog";
+#### 			};
+####.
+
+## STEP 6b:
+#### 	--add class Paint to your CfgInteractionMenus
+#### 	class Car and class Air and class Boat
+#### 
+#### 		class Actions 
+####
+#### 			class Paint : ExileAbstractAction
+#### 			{
+#### 				title = "Paint Vehicle";
+#### 				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ((locked ExileClientInteractionObject) != 1) && (ExileClientNearPaintShop)";
 #### 				action = "ExileClientInteractionObject call HALV_paintshop_opendialog";
 #### 			};
 ####.

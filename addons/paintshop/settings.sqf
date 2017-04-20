@@ -11,8 +11,10 @@
 */
 
 
-//these are the classnames of buildings that will activate the paintshop
-_paintshopbuildings = ["Land_CarService_F","Land_Repair_center","Exile_Construction_Flag_Static"];
+//these are the classnames of buildings that will activate the paintshop for uniforms / back packs / vehicles
+//Base Painting is based on your own territory and the action is built into exile code
+//Vehicle Painting is based on _paintshopBuildings and the action is built into exile code
+_paintshopbuildings = ["Land_CarService_F","Land_Repair_center"]; 
 
 //add textures and preset colors here
 _textures = [
