@@ -90,3 +90,20 @@ Step 7:
 	
 STEP 8:
  	if using infiStar add allowed IDDs 6666
+
+	
+	ATTENTION ATTENTION ATTENTION
+	--If you are running 64bit exile and are on extdb3 use this for your exile.ini not the examples above in step 4 and 5
+	--This is for 64 bit compatibility upgrades to Exile with extDB3 and Arma 3 1.68
+
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;;    Halv's PaintShop eXpanded 4 Exile
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	[loadConstruction]
+	SQL1_1 = SELECT id,class,account_uid,spawned_at,position_x,position_y,position_z,direction_x,direction_y,direction_z,up_x,up_y,up_z,is_locked,pin_code,territory_id,deleted_at,damage,paintshop FROM construction WHERE id = ?
+	SQL1_INPUTS = 1 
+	OUTPUT = 1,2-STRING,3-STRING,4-STRING,5,6,7,8,9,10,11,12,13,14,15-STRING,16,17,18,19
+	 
+	[updateBasePaint]
+	SQL1_1 = UPDATE construction SET paintshop = ?  WHERE id = ?
+	SQL1_INPUTS = 1,2
